@@ -1,0 +1,258 @@
+@use 'base'
+@use "sass:math"
+
+$OneColor : #3E2C3A
+$TwoColor : #742F42
+$ThreeColor : #9C1F2D
+$FourColor :  #DE7F0B
+$FiveColor : #FAB407
+$SixColor : #E7E9DC
+
+@mixin border-radius()
+    border-radius: 14px
+    
+
+@mixin flexSetting($type: row)
+    display: flex
+    flex-direction: $type
+    
+@mixin MainContainer($width: 320px, $height: 90px)
+    @include border-radius()
+    @include flexSetting($type: row)
+    background-color: $TwoColor
+    width: $width
+    height: $height
+    color: $FourColor
+    justify-content: center
+    align-items: center
+    div
+        @include border-radius()
+        @include flexSetting($type: row)
+        background-color: $TwoColor
+        width: calc($width - 30px)
+        height: calc($height - 30px)
+        color: $FourColor
+        justify-content: center
+        align-items: center
+        border: 4px solid $FourColor
+
+%containerArticle
+    align-items: center
+    max-width: 1004px
+    width: 100%
+
+%ContainerColumn
+    @include flexSetting($type: column)
+    justify-content: space-between
+    align-items: center
+    width: 400px
+    text-align: center
+
+
+header
+    @include flexSetting($type: row)
+    width: 100%
+    justify-content: center 
+    .box
+        @include flexSetting($type: row)
+        @extend %containerArticle
+        justify-content: space-between
+        .LogoInfo
+            @include flexSetting($type: column)
+            width: 456px
+            
+            .MainLogo
+                text-align: center
+                font-size: 48px
+                color: $FiveColor
+                letter-spacing: 11.52px
+                width: 164px
+                margin-bottom: 39px
+            .LogoDiscription
+                font-size:14px
+                color: $FourColor
+                line-height: 128.604%
+        .UserBox
+            @include border-radius()
+            @include flexSetting($type: row)
+            width: 230px
+            height: 230px   
+            background-color: $TwoColor
+            color: $SixColor
+            justify-content: center
+            align-items: center
+            .Content
+                @include border-radius()
+                @include flexSetting($type: column)
+                width: 200px
+                height: 200px
+                border: 4px solid $FourColor
+                justify-content: space-evenly
+                align-items: center
+                .ImageUser
+                    width: 80px
+                    height: 80px
+                    border: 4px solid $FourColor 
+                    border-radius: 100%
+                .UserName
+                    font-size: 18px
+                .FunctionMenu
+                    @include flexSetting($type: row)
+                    justify-content: space-evenly
+                    align-items: center
+                    width: 70%
+                    .Button
+                        display: inline-block
+                        border: 4px solid $FourColor
+                        justify-content: center
+                        height: 57px
+                        width: 57px
+                        align-items: center
+                        &:nth-child(1) 
+                            @include flexSetting($type: column)
+                            border-radius: 14px 0px 0px 14px
+                            img
+                                display: inline-block
+                                width: 42px
+                                height: 42px
+                            .current 
+                                @include border-radius()
+                                font-size: 10px
+                                width: 50px
+                                background-color: $FourColor
+                                text-align: center
+                        
+                        &:nth-child(2) 
+                            @include flexSetting($type: row)
+                            border-radius: 0px 14px 14px 0px                     
+                            .ContentButton
+                                @include flexSetting($type: column)
+                                width: 45px
+                                height: 25px
+                                justify-content: space-between
+
+                                div
+                                    width: 100%
+                                    height: 5px
+                                    background-color: $SixColor
+                                    border-radius: 0 14px 14px 0
+
+main
+    @include flexSetting($type: column)
+    width: 100% 
+    align-items: center
+    padding: 41px 0
+    .ContainerMain
+        @include flexSetting($type: column)
+        @extend %containerArticle
+        align-items: flex-start
+        .SecondaryLogo
+                color: $FiveColor
+                font-size: 24px
+                margin-bottom: 41px
+        .ContainerArticleTwo
+            .ContainerHutBarr 
+                @include flexSetting($type: row)
+                width: 756px
+                justify-content: space-between
+                flex-wrap: wrap
+                .Cards
+                    width: 104px
+                    font-size: 14px
+                    color: $FourColor
+                    text-align: center
+                    margin-right: 20px
+                    margin-bottom: 41px
+                    .ImageMenu
+                        overflow: hidden
+                        width: 100px
+                        height: 100px
+                        margin-bottom: 15px
+        .ContainerArticleThree
+            
+            .ContainerProductBarr
+                display: grid
+                grid-template-columns: 1fr 1fr 1fr 1fr
+                gap: 41px  
+                justify-items: center
+                margin-bottom: 41px
+                .CardsProduct
+                    .Image
+                        width: 100%
+                    .TextInfo
+                        @include flexSetting($type: row)
+                        font-size: 15px
+                        color: $FourColor
+                        span
+                            @include flexSetting($type: row)
+                            flex-grow: 1
+                            &:nth-child(2)
+                                justify-content: flex-end
+        .ButtonMainContainer
+            @include MainContainer()
+        .NotPage
+            color: $FiveColor
+            font-size: 40px
+            margin: 41px 0
+        .ContainerButton
+            @include MainContainer($width: 400px, $height: 90px)
+            font-size: 25px
+            margin: 41px 0
+        .ContainerProductImage
+            overflow: hidden
+            width: 500px
+            height: 500px
+            margin-bottom: 41px 
+        
+            
+footer
+    @include flexSetting($type: row)
+    width: 100%
+    padding: 41px 0
+    justify-content: center
+    .FooterBox
+        @include flexSetting($type: row)
+        @extend %containerArticle
+        align-items: flex-start
+        justify-content: space-around
+        .Title
+            width: 100%
+            color: $FiveColor
+            font-size: 24px
+            overflow: hidden
+
+        .ContainerContacts
+            @extend %ContainerColumn
+            .MainContainerInfo
+                @include MainContainer($width: 300px, $height: 90px)
+                margin: 12px 0
+                .SecondaryContainerInfo
+                    @include flexSetting($type: column)
+                    
+                
+        .ContainerSocialButton       
+            ul
+                margin: 12px 0
+                display: grid
+                grid-template-columns: 90px 90px
+                grid-template-rows: 90px 90px
+                gap: 15px
+            @extend %ContainerColumn
+            .MainContainerButton
+                @include MainContainer($width: 90px, $height: 90px)
+                                
+                                
+                        
+                        
+
+                    
+
+
+
+                
+
+
+
+                
+
+            

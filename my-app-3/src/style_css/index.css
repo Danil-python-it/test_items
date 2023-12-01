@@ -1,0 +1,345 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  overflow-x: hidden;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  min-width: 1000px;
+  padding-top: 66px;
+  background-color: #3E2C3A;
+}
+
+footer .FooterBox, main .ContainerMain, header .box {
+  align-items: center;
+  max-width: 1004px;
+  width: 100%;
+}
+
+footer .FooterBox .ContainerSocialButton, footer .FooterBox .ContainerContacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+header .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .box .LogoInfo {
+  display: flex;
+  flex-direction: column;
+  width: 456px;
+}
+header .box .LogoInfo .MainLogo {
+  text-align: center;
+  font-size: 48px;
+  color: #FAB407;
+  letter-spacing: 11.52px;
+  width: 164px;
+  margin-bottom: 39px;
+}
+header .box .LogoInfo .LogoDiscription {
+  font-size: 14px;
+  color: #DE7F0B;
+  line-height: 128.604%;
+}
+header .box .UserBox {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  width: 230px;
+  height: 230px;
+  background-color: #742F42;
+  color: #E7E9DC;
+  justify-content: center;
+  align-items: center;
+}
+header .box .UserBox .Content {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  border: 4px solid #DE7F0B;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .box .UserBox .Content .ImageUser {
+  width: 80px;
+  height: 80px;
+  border: 4px solid #DE7F0B;
+  border-radius: 100%;
+}
+header .box .UserBox .Content .UserName {
+  font-size: 18px;
+}
+header .box .UserBox .Content .FunctionMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+}
+header .box .UserBox .Content .FunctionMenu .Button {
+  display: inline-block;
+  border: 4px solid #DE7F0B;
+  justify-content: center;
+  height: 57px;
+  width: 57px;
+  align-items: center;
+}
+header .box .UserBox .Content .FunctionMenu .Button:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px 0px 0px 14px;
+}
+header .box .UserBox .Content .FunctionMenu .Button:nth-child(1) img {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+}
+header .box .UserBox .Content .FunctionMenu .Button:nth-child(1) .current {
+  border-radius: 14px;
+  font-size: 10px;
+  width: 50px;
+  background-color: #DE7F0B;
+  text-align: center;
+}
+header .box .UserBox .Content .FunctionMenu .Button:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0px 14px 14px 0px;
+}
+header .box .UserBox .Content .FunctionMenu .Button:nth-child(2) .ContentButton {
+  display: flex;
+  flex-direction: column;
+  width: 45px;
+  height: 25px;
+  justify-content: space-between;
+}
+header .box .UserBox .Content .FunctionMenu .Button:nth-child(2) .ContentButton div {
+  width: 100%;
+  height: 5px;
+  background-color: #E7E9DC;
+  border-radius: 0 14px 14px 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 41px 0;
+}
+main .ContainerMain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .ContainerMain .SecondaryLogo {
+  color: #FAB407;
+  font-size: 24px;
+  margin-bottom: 41px;
+}
+main .ContainerMain .ContainerArticleTwo .ContainerHutBarr {
+  display: flex;
+  flex-direction: row;
+  width: 756px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .ContainerMain .ContainerArticleTwo .ContainerHutBarr .Cards {
+  width: 104px;
+  font-size: 14px;
+  color: #DE7F0B;
+  text-align: center;
+  margin-right: 20px;
+  margin-bottom: 41px;
+}
+main .ContainerMain .ContainerArticleTwo .ContainerHutBarr .Cards .ImageMenu {
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+main .ContainerMain .ContainerArticleThree .ContainerProductBarr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 41px;
+  justify-items: center;
+  margin-bottom: 41px;
+}
+main .ContainerMain .ContainerArticleThree .ContainerProductBarr .CardsProduct .Image {
+  width: 100%;
+}
+main .ContainerMain .ContainerArticleThree .ContainerProductBarr .CardsProduct .TextInfo {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  color: #DE7F0B;
+}
+main .ContainerMain .ContainerArticleThree .ContainerProductBarr .CardsProduct .TextInfo span {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+main .ContainerMain .ContainerArticleThree .ContainerProductBarr .CardsProduct .TextInfo span:nth-child(2) {
+  justify-content: flex-end;
+}
+main .ContainerMain .ButtonMainContainer {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 320px;
+  height: 90px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+}
+main .ContainerMain .ButtonMainContainer div {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 290px;
+  height: 60px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #DE7F0B;
+}
+main .ContainerMain .NotPage {
+  color: #FAB407;
+  font-size: 40px;
+  margin: 41px 0;
+}
+main .ContainerMain .ContainerButton {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 400px;
+  height: 90px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 41px 0;
+}
+main .ContainerMain .ContainerButton div {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 370px;
+  height: 60px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #DE7F0B;
+}
+main .ContainerMain .ContainerProductImage {
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 41px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 41px 0;
+  justify-content: center;
+}
+footer .FooterBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+footer .FooterBox .Title {
+  width: 100%;
+  color: #FAB407;
+  font-size: 24px;
+  overflow: hidden;
+}
+footer .FooterBox .ContainerContacts .MainContainerInfo {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 300px;
+  height: 90px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+}
+footer .FooterBox .ContainerContacts .MainContainerInfo div {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 270px;
+  height: 60px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #DE7F0B;
+}
+footer .FooterBox .ContainerContacts .MainContainerInfo .SecondaryContainerInfo {
+  display: flex;
+  flex-direction: column;
+}
+footer .FooterBox .ContainerSocialButton ul {
+  margin: 12px 0;
+  display: grid;
+  grid-template-columns: 90px 90px;
+  grid-template-rows: 90px 90px;
+  gap: 15px;
+}
+footer .FooterBox .ContainerSocialButton .MainContainerButton {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 90px;
+  height: 90px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+}
+footer .FooterBox .ContainerSocialButton .MainContainerButton div {
+  border-radius: 14px;
+  display: flex;
+  flex-direction: row;
+  background-color: #742F42;
+  width: 60px;
+  height: 60px;
+  color: #DE7F0B;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #DE7F0B;
+}
+
+/*# sourceMappingURL=index.css.map */
